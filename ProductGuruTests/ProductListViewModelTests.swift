@@ -114,7 +114,7 @@ struct ProductListViewModelTests {
         #expect(viewModel.state == .list)
         
         viewModel.displayWarning()
-        #expect(viewModel.shouldDisplayWarning)
+        #expect(viewModel.shouldDisplayWarningAlert)
     }
     
     @Test("Select product test")

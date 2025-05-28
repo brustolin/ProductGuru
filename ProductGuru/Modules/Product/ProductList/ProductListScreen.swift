@@ -39,7 +39,7 @@ struct ProductListScreen : View {
             }
         })
         .navigationTitle("Products")
-        .alert("Warning", isPresented: $viewModel.shouldDisplayWarning) {
+        .alert("Warning", isPresented: $viewModel.shouldDisplayWarningAlert) {
             Button("OK", role: .cancel) { }
         } message: {
             Text(viewModel.warning ?? "An error occurred while loading the products.")

@@ -7,6 +7,8 @@ It uses SwiftUI for the interface and follows the MVVM architecture to manage th
 Dependency Injection and clear separation of responsibilities are strongly implemented to 
 ensure the project is well-decoupled, easy to maintain, and straightforward to test.
 
+Some classes, protocols, and structs were kept in the same file for easy review; usually, I would split them into different files.
+
 ## Time spent
 
 ~ 12 hours

@@ -2,10 +2,9 @@ import SwiftUI
 
 @main
 struct ProductGuruApp: App {
-    let dataManager = ProductGuruDataManager()
-    
-    private var formatter = AppFormatter()
-    private var settings = AppSettings()
+    private let dataManager = ProductGuruDataManager()
+    private let formatter = AppFormatter()
+    private let settings = AppSettings()
     
     var body: some Scene {
         WindowGroup {

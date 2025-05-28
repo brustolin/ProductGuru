@@ -19,7 +19,7 @@ enum ProductListState {
     private(set) var products: [ProductInfo]
     private(set) var hasMoreItens : Bool = true
     private(set) var warning: String? = nil
-    var shouldDisplayWarning: Bool = false
+    var shouldDisplayWarningAlert: Bool = false
     
     let favoriteManager : FavoriteManager
     let navigator: ProductNavigator
@@ -63,7 +63,7 @@ enum ProductListState {
             state = .list
         } catch APIClientError.networkError {
             // If we already displaying products to the user
-            // we dont display the no network view, we show a warning indicator
+            // we dont display the `no network` view, we show a warning indicator
             if products.count == 0 {
                 state = .errorNetwork
             } else {
@@ -87,6 +87,6 @@ enum ProductListState {
     
     func displayWarning() {
         guard warning != nil else { return }
-        shouldDisplayWarning = true
+        shouldDisplayWarningAlert = true
     }
 }
